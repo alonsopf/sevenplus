@@ -293,8 +293,9 @@ input[type="submit"]:hover{
             <input type="text" class="text" id="correo" name="correo" value="correo@dominio.org" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" ><a href="#" class=" icon user"></a>
           </li>
           <li>
-            <input type="password" id="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon lock"></a>
+            <input type="password" id="password" name="passwordOld" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon lock"></a>
           </li>
+          <input type="hidden" id="passwordReal" name="password"/>
           
            <div class ="forgot">
             <h3><a href="#">&iquest;Se le olvido de su password?</a></h3>
@@ -307,7 +308,7 @@ input[type="submit"]:hover{
        function DoSubmit() {
             var pass = document.getElementById("password").value;
             pass = sha512(pass);
-            document.getElementById("password").value = pass;
+            document.getElementById("passwordReal").value = pass;
             return true;
         }
 
