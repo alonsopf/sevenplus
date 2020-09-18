@@ -1,0 +1,3 @@
+{"type":"Topology","objects":{"states":{"type":"GeometryCollection","geometries":[
+	{"type":"MultiPolygon","properties":{"state_code":2,"state_name":"Baja California"},"arcs":[[[278]],[[279]],[[280]],[[281]],[[282]],[[283]],[[284,285,286,287,288,289,290,291,292]]]}
+] }} }
